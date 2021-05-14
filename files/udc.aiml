@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that. If you're a computer science student looking for career advice, type "Career Advice".</template>
+  </category>
+  
+  <category>
+      <pattern>HI</pattern>
+      <template>Hello, I give career advice to computer science students. To continue, type "Career Advice".</template>
+  </category>
+  
+  <category>
+      <pattern>CAREER ADVICE</pattern>
+      <template>Are you more interested in Programming, Data, or IT</template>
+  </category>
+  
+  <category>
+      <pattern>PROGRAMMING</pattern>
+      <that>Are you more interested in Programming, Data, or IT</that>
+      <template>Below are some programming related careers
+      <carousel>
+          <card>
+              <image>https://www.redhat.com/sysadmin/sites/default/files/styles/full/public/2020-07/code-2434271_1280%20Cropped.jpg</image>
+              <title>Software Engineer</title>
+              <subtitle>Software Engineers Develop Software</subtitle>
+              <button>
+                  <text>Click if Interested</text>
+                  <postback>SEinfo</postback>
+              </button>
+          </card>
+          <card>
+              <image>https://www.technojobs.co.uk/info/sites/www.technojobs.co.uk/files/styles/article_image_large/public/AAEAAQAAAAAAAAg8AAAAJGFhMDRkNmMyLTY5M2EtNDgwYS1iMWE4LTk2YThkYTM0ODY4OQ.jpg</image>
+              <title>Web Developer</title>
+              <subtitle>Build Websites</subtitle>
+              <button>
+                  <text>Click if Interested</text>
+                  <postback>WDinfo</postback>
+              </button>
+          </card>
+      </carousel>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>SEinfo</pattern>
+      <template>
+          <link>
+              <text>Find info about Software Engineer careers here</text>
+              <url>https://www.computerscience.org/careers/software-engineer/</url>
+          </link>
+      </template>
+  </category>
+  
+    <category>
+      <pattern>WDinfo</pattern>
+      <template>
+          <link>
+              <text>Find info about Web Development careers here</text>
+              <url>https://www.computerscience.org/careers/web-developer/</url>
+          </link>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>IT</pattern>
+      <that>Are you more interested in Programming, Data, or IT</that>
+      <template>Below are some IT related careers
+      <carousel>
+          <card>
+              <image>https://computercpr.com/wp-content/uploads/2017/07/pexels-photo-442150.jpeg</image>
+              <title>Network Administrator</title>
+              <subtitle>Design, Manage, and Maintain Networks</subtitle>
+              <button>
+                  <text>Click if Interested</text>
+                  <postback>NAinfo</postback>
+              </button>
+          </card>
+          <card>
+              <image>https://dv-website.s3.amazonaws.com/uploads/2020/04/kf_sywtbdba_04092020.jpg</image>
+              <title>Database Administrator</title>
+              <subtitle>Design, Manage, and Maintain Databases</subtitle>
+              <button>
+                  <text>Click if Interested</text>
+                  <postback>DAinfo</postback>
+              </button>
+          </card>
+      </carousel>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>NAinfo</pattern>
+      <template>
+          <link>
+              <text>Find info about Network Administrator careers here</text>
+              <url>https://www.computerscience.org/careers/network-administrator/</url>
+          </link>
+      </template>
+  </category>
+  
+    <category>
+      <pattern>DAinfo</pattern>
+      <template>
+          <link>
+              <text>Find info about Database Administrator careers here</text>
+              <url>https://www.computerscience.org/careers/database-administrator/</url>
+          </link>
+      </template>
+  </category>
+  
+    <category>
+      <pattern>DATA</pattern>
+      <that>Are you more interested in Programming, Data, or IT</that>
+      <template>You may be interested in Data Science
+          <card>
+              <image>https://miro.medium.com/max/860/1*9onqVYdPPrCcwDX6mGKCpg.jpeg</image>
+              <title>Data Scientist</title>
+              <subtitle>Analyze data and address problems</subtitle>
+              <button>
+                  <text>Click if Interested</text>
+                  <postback>DSinfo</postback>
+              </button>
+          </card>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>DSinfo</pattern>
+      <template>
+          <link>
+              <text>Find info about Data Science careers here</text>
+              <url>https://www.computerscience.org/careers/data-science/</url>
+          </link>
+      </template>
+  </category>
+  
+</aiml>
